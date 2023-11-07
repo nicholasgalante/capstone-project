@@ -28,5 +28,6 @@
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.keyß
-.vscode/settings.jsonß
+/config/master.key
+.vscode/settings.json
+.vscode/settings.json
