@@ -21,7 +21,8 @@ u1 = Mentor.create(
   email_address: "mentor1@example.com",
   type: "mentor",
   password_digest: BCrypt::Password.create("password"),
-  company_name: "",
+  company_name: "TechIndustry",
+  job_title: "Senior Software Engineer",
   status: "complete"
 )
 
@@ -31,6 +32,9 @@ u2 = Mentor.create(
   email_address: "mentor2@example.com",
   type: "mentor",
   password_digest: BCrypt::Password.create("password"),
+  company_name: "",
+  job_title: "",
+  status: "incomplete"
 )
 
 u3 = Student.create(
