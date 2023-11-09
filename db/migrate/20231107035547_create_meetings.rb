@@ -4,7 +4,6 @@ class CreateMeetings < ActiveRecord::Migration[6.1]
       t.integer :organizer_id
       t.datetime :meeting_datetime
       t.string :location
-      t.string :status, default: "pending"
       t.text :topics_discussed
       t.text :next_steps
       t.timestamps
