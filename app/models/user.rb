@@ -12,3 +12,4 @@ class User < ApplicationRecord
    validates :type, inclusion: { in: ['student', 'mentor'] }
    validates :password_digest, presence: true, length: { minimum: 6 }
 end
+aq
