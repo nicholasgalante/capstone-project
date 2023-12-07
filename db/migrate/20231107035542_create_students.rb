@@ -6,7 +6,7 @@ class CreateStudents < ActiveRecord::Migration[6.1]
       t.string :degree_type
       t.string :area_of_study
       t.date :expected_graduation
-      t.string :status, default: "incomplete"
+      t.string :application_status, default: "incomplete"
       t.timestamps
     end
   end

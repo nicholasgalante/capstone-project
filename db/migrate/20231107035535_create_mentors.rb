@@ -3,7 +3,7 @@ class CreateMentors < ActiveRecord::Migration[6.1]
     create_table :mentors do |t|
       t.string :company_name
       t.string :job_title
-      t.string :status, default: "incomplete"
+      t.string :application_status, default: "incomplete"
       t.timestamps
     end
   end
