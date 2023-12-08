@@ -22,7 +22,7 @@ user1 = Mentor.create(
   password_digest: BCrypt::Password.create("password"),
   company_name: "TechIndustry",
   job_title: "Senior Software Engineer",
-  application_status: "complete",
+  matched: True,
 )
 
 user2 = Mentor.create(
@@ -33,7 +33,7 @@ user2 = Mentor.create(
   password_digest: BCrypt::Password.create("password"),
   company_name: "",
   job_title: "",
-  application_status: "incomplete",
+  matched: False,
 )
 
 user3 = Student.create(
@@ -47,7 +47,7 @@ user3 = Student.create(
   degree_type: "Bachelors of Science",
   area_of_study: "Computer Science",
   expected_graduation: "07/01/2025",
-  application_status: "complete",
+  matched: True,
 )
 
 user4 = Student.create(
@@ -61,7 +61,7 @@ user4 = Student.create(
   degree_type: "Bachelors of Science",
   area_of_study: "Computer Engineering",
   expected_graduation: "",
-  application_status: "incomplete",
+  matched: False,
 )
 
 meeting1 = Meeting.create(
@@ -83,23 +83,19 @@ meeting2 = Meeting.create(
 UserMeeting.create(
   meeting_id: meeting1.id,
   user_id: user3.id,
-  confirmed: true,
 )
 
 UserMeeting.create(
   meeting_id: meeting1.id,
   user_id: user1.id,
-  confirmed: true,
 )
 
 UserMeeting.create(
    meeting_id: meeting2.id,
    user_id: user3.id,
-   confirmed: true,
  )
  
  UserMeeting.create(
    meeting_id: meeting2.id,
    user_id: user1.id,
-   confirmed: false,
  )
