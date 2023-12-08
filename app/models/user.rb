@@ -7,6 +7,7 @@ class User < ApplicationRecord
    has_many :meetings, through: :user_meetings
    has_one :student, class_name: 'User', foreign_key: :mentor_id, dependent: :destroy
    belongs_to :mentor, class_name: 'User', optional: true
+   has_one :application
 
    validates :first_name, presence: true, length: { maximum: 25 }
    validates :last_name, presence: true, length: { maximum: 25 }
